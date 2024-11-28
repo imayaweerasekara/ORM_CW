@@ -8,26 +8,25 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="signUpForm" prefHeight="296.0" prefWidth="344.0" style="-fx-background-color: #5C8374; -fx-background-radius: 5%;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SignUpFormController">
+<AnchorPane fx:id="signUpForm" prefHeight="296.0" prefWidth="344.0" style="-fx-background-color: #697565; -fx-background-radius: 5%;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SignUpFormController">
    <children>
       <TextField fx:id="inputUserName" layoutX="53.0" layoutY="95.0" onAction="#inputUserNameOnAction" prefHeight="32.0" prefWidth="239.0" promptText="User Name" style="-fx-background-radius: 10;" />
-      <Label layoutX="102.0" layoutY="23.0" text="Sign Up">
-         <font>
-            <Font name="DejaVu Serif Condensed Bold" size="35.0" />
-         </font>
-      </Label>
       <PasswordField fx:id="inputPassword" layoutX="52.0" layoutY="151.0" prefHeight="32.0" prefWidth="239.0" promptText="Password" style="-fx-background-radius: 10;" />
-      <Button layoutX="109.0" layoutY="243.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="32.0" prefWidth="127.0" style="-fx-background-color: #3B2F2F;" text="Sign up" textFill="WHITE">
+      <Button layoutX="109.0" layoutY="243.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="32.0" prefWidth="127.0" style="-fx-background-color: #092635; -fx-background-radius: 8;" text="Sign up" textFill="WHITE">
          <font>
-            <Font name="DejaVu Serif Condensed Bold" size="15.0" />
+            <Font name="System Bold Italic" size="13.0" />
          </font></Button>
-      <CheckBox fx:id="adminCheckBox" layoutX="43.0" layoutY="209.0" mnemonicParsing="false" onAction="#adminCheckBoxOnAction" text="Admin">
+      <CheckBox fx:id="adminCheckBox" layoutX="43.0" layoutY="209.0" mnemonicParsing="false" onAction="#adminCheckBoxOnAction" text="Admin" textFill="#092635">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font></CheckBox>
-      <CheckBox fx:id="admissionCheckBox" layoutX="131.0" layoutY="209.0" mnemonicParsing="false" onAction="#admissionCheckBoxOnAction" text="Admissions Coordinator">
+      <CheckBox fx:id="admissionCheckBox" layoutX="131.0" layoutY="209.0" mnemonicParsing="false" onAction="#admissionCheckBoxOnAction" text="Admissions Coordinator" textFill="#092635">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font></CheckBox>
@@ -36,5 +35,51 @@
             <Image url="@asset/icon/icons8-back-50.png" />
          </image>
       </ImageView>
+      <Text fill="#092635" layoutX="60.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" wrappingWidth="83.763671875">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#092635" layoutX="60.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="83.763671875">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="100.0" layoutY="5.0" text="Sign Up">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.604415616303814">
+                     <color>
+                        <Color red="0.27950000762939453" green="0.4300000071525574" blue="0.3296666741371155" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

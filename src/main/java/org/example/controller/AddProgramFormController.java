@@ -2,20 +2,21 @@ package org.example.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class AddPaymentFormController {
+public class AddProgramFormController {
 
     @FXML
-    private AnchorPane addPaymentForm;
+    private AnchorPane addProgramForm;
 
     @FXML
-    private TextField txtPayment;
+    private ChoiceBox<?> selectProgramChoiceBox;
 
     @FXML
-    private TextField txtProgram;
+    private TextField txtInstallment;
 
     @FXML
     private TextField txtStudentId;
@@ -34,7 +35,7 @@ public class AddPaymentFormController {
     }
 
     @FXML
-    void txtPaymentKeyAction(KeyEvent event) {
+    void txtInstallmentKeyAction(KeyEvent event) {
 
     }
 

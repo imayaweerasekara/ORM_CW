@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addProgramForm" prefHeight="372.0" prefWidth="433.0" style="-fx-background-color: #FFE5B4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AddProgramFormController">
+<AnchorPane fx:id="addProgramForm" prefHeight="372.0" prefWidth="433.0" style="-fx-background-color: #FFE5B4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AddProgramFormController">
    <children>
       <Label layoutX="128.0" layoutY="31.0" prefHeight="16.0" prefWidth="178.0" text="Add Program">
          <font>

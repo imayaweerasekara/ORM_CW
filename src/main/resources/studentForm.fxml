@@ -11,18 +11,16 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="studentForm" prefHeight="630.0" prefWidth="770.0" style="-fx-background-color: #FFE5B4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+<AnchorPane fx:id="studentForm" prefHeight="630.0" prefWidth="770.0" style="-fx-background-color: #697565;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.StudentFormController">
    <children>
-      <Label layoutX="113.0" layoutY="46.0" text="Student Manage ">
-         <font>
-            <Font name="DejaVu Serif Condensed Bold" size="30.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="45.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@asset/icon/icons8-student-48.png" />
+            <Image url="@asset/images/icon/student.png" />
          </image>
       </ImageView>
       <TextField fx:id="txtId" layoutX="128.0" layoutY="138.0" onAction="#txtIdOnAction" onKeyReleased="#txtIdKeyAction" />
@@ -44,41 +42,41 @@
          <children>
             <ChoiceBox fx:id="programChoiceBox" layoutX="146.0" layoutY="10.0" prefHeight="24.0" prefWidth="198.0" />
             <TextField fx:id="txtInstallment" layoutX="146.0" layoutY="69.0" onKeyReleased="#txtInstallmentKeyAction" prefHeight="24.0" prefWidth="198.0" />
-            <Label layoutX="17.0" layoutY="14.0" prefHeight="16.0" prefWidth="79.0" text="Programs : ">
+            <Label layoutX="17.0" layoutY="14.0" prefHeight="16.0" prefWidth="79.0" text="Programs : " textFill="#021526">
                <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                  <Font name="System Bold Italic" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="17.0" layoutY="73.0" prefHeight="16.0" prefWidth="129.0" text="1 st Installment:  : ">
+            <Label layoutX="17.0" layoutY="73.0" prefHeight="16.0" prefWidth="129.0" text="1 st Installment:  : " textFill="#021526">
                <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+                  <Font name="System Bold Italic" size="13.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Label layoutX="57.0" layoutY="142.0" text="ID :">
+      <Label layoutX="57.0" layoutY="142.0" text="ID :" textFill="#021526">
          <font>
-            <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+            <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="57.0" layoutY="199.0" text="Name :">
+      <Label layoutX="57.0" layoutY="199.0" text="Name :" textFill="#021526">
          <font>
-            <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+            <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="57.0" layoutY="252.0" text="Address :">
+      <Label layoutX="57.0" layoutY="252.0" text="Address :" textFill="#021526">
          <font>
-            <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+            <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="57.0" layoutY="311.0" text="Tel :">
+      <Label layoutX="57.0" layoutY="311.0" text="Tel :" textFill="#021526">
          <font>
-            <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+            <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="385.0" layoutY="142.0" prefHeight="16.0" prefWidth="129.0" text="Registation Date :">
+      <Label layoutX="385.0" layoutY="142.0" prefHeight="16.0" prefWidth="129.0" text="Registation Date :" textFill="#021526">
          <font>
-            <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+            <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
       <JFXButton layoutX="627.0" layoutY="361.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #228B22;" text="Save" textFill="WHITE">
@@ -101,5 +99,41 @@
             <Font name="DejaVu Serif Bold" size="15.0" />
          </font>
       </JFXButton>
+      <Label layoutX="111.0" layoutY="37.0" text="STUDENT MANAGE">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

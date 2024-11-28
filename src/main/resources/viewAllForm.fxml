@@ -8,26 +8,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="630.0" prefWidth="770.0" style="-fx-background-color: #FFE5B4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ViewAllFormController">
+<AnchorPane prefHeight="630.0" prefWidth="770.0" style="-fx-background-color: #697565;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ViewAllFormController">
    <children>
-      <Label layoutX="123.0" layoutY="56.0" text="View Students">
-         <font>
-            <Font name="DejaVu Serif Condensed Bold" size="30.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@asset/icon/icons8-view-48.png" />
+            <Image url="@asset/images/icon/view.png" />
          </image>
       </ImageView>
       <ChoiceBox fx:id="selectPrgramChoiceBox" layoutX="264.0" layoutY="167.0" prefHeight="24.0" prefWidth="204.0" />
-      <Label layoutX="64.0" layoutY="169.0" text="Select Program : ">
-         <font>
-            <Font name="DejaVu Sans Condensed Bold" size="18.0" />
-         </font>
-      </Label>
       <TableView fx:id="viewTbl" layoutX="61.0" layoutY="240.0" prefHeight="271.0" prefWidth="649.0">
         <columns>
           <TableColumn fx:id="colStudentId" prefWidth="95.0" text="Student ID" />
@@ -38,24 +31,143 @@
             <TableColumn fx:id="colPayment" prefWidth="76.0" text="Payment" />
         </columns>
       </TableView>
-      <Label layoutX="476.0" layoutY="564.0" text="Student Count : ">
+      <Label fx:id="lblStudentCount" alignment="CENTER" layoutX="635.0" layoutY="550.0" prefHeight="21.0" prefWidth="35.0" text="0">
          <font>
             <Font name="DejaVu Sans Mono Bold" size="18.0" />
          </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.12941177189350128" green="0.3490196168422699" blue="0.3803921639919281" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01568627543747425" green="0.054901961237192154" blue="0.2235294133424759" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
       </Label>
-      <Label fx:id="lblStudentCount" alignment="CENTER" layoutX="655.0" layoutY="564.0" prefHeight="21.0" prefWidth="35.0" text="0">
-         <font>
-            <Font name="DejaVu Sans Mono Bold" size="18.0" />
-         </font>
-      </Label>
-      <Pane layoutX="653.0" layoutY="160.0" onMouseClicked="#refreshTblOnClickAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #1E90FF; -fx-background-radius: 5;">
+      <Pane layoutX="653.0" layoutY="160.0" onMouseClicked="#refreshTblOnClickAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #021526; -fx-background-radius: 80;">
          <children>
-            <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@asset/icon/icons8-refresh-48.png" />
+                  <Image url="@asset/images/icon/serchview.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
+      <Label layoutX="115.0" layoutY="45.0" text="VIEW STUDENTS">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="76.0" layoutY="164.0" text="Select Program :" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="458.0" layoutY="547.0" text="Student Count :">
+         <font>
+            <Font name="System Italic" size="23.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.12941177189350128" green="0.3490196168422699" blue="0.3803921639919281" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01568627543747425" green="0.054901961237192154" blue="0.2235294133424759" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>
