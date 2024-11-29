@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settingForm" prefHeight="630.0" prefWidth="770.0" style="-fx-background-color: #697565;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinaryacademy.controller.SettingFormController">
+   <children>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="45.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/icon/setting.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="71.0" layoutY="187.0" text="User Name : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtUserName" layoutX="181.0" layoutY="183.0" onAction="#txtUserNameOnAction" />
+      <Label layoutX="391.0" layoutY="187.0" text="Password : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="528.0" layoutY="183.0" onAction="#txtPasswordOnAction" />
+      <Label layoutX="71.0" layoutY="229.0" text="New Password : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtNewPassword" layoutX="181.0" layoutY="225.0" onAction="#txtNewPasswordOnAction" />
+      <Label layoutX="391.0" layoutY="229.0" text="Confirm Password : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtConfirmPassword" layoutX="528.0" layoutY="225.0" />
+      <JFXButton layoutX="622.0" layoutY="276.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #0B2F9F; -fx-background-radius: 13;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <Pane fx:id="visiblePane" layoutX="49.0" layoutY="315.0" prefHeight="277.0" prefWidth="660.0">
+         <children>
+            <TableView fx:id="tblUser" layoutX="96.0" layoutY="63.0" prefHeight="200.0" prefWidth="468.0">
+              <columns>
+                <TableColumn fx:id="colUserName" prefWidth="199.0" text="User Name" />
+                <TableColumn fx:id="colUserRole" prefWidth="198.0" text="User Role" />
+                  <TableColumn fx:id="colDelete" prefWidth="70.0" />
+              </columns>
+            </TableView>
+            <Label layoutX="47.0" layoutY="17.0" text="Show User Details" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4572761499427075">
+                           <color>
+                              <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7550335570469796">
+                           <color>
+                              <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="103.0" layoutY="34.0" text="SETTING">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="68.0" layoutY="122.0" text="Change User Details" underline="true" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

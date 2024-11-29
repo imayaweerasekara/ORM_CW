@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPaymentForm" prefHeight="400.0" prefWidth="474.0" style="-fx-background-color: #697565;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinaryacademy.controller.AddPaymentFormController">
+   <children>
+      <Label layoutX="90.0" layoutY="115.0" text="Student ID : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="159.0" text="Student Name : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="202.0" text="Program : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="248.0" text="Payment : " textFill="#021526">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStudentId" editable="false" layoutX="214.0" layoutY="111.0" />
+      <TextField fx:id="txtStudentName" editable="false" layoutX="214.0" layoutY="155.0" />
+      <TextField fx:id="txtPayment" layoutX="214.0" layoutY="244.0" onKeyReleased="#txtPaymentKeyAction" />
+      <JFXButton layoutX="143.0" layoutY="313.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #228B22; -fx-background-radius: 13;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="237.0" layoutY="313.0" onAction="#btnCancelOnAction" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #B8001F; -fx-background-radius: 13;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtProgram" editable="false" layoutX="214.0" layoutY="198.0" />
+      <Label layoutX="118.0" layoutY="32.0" text="ADD PAYMENT">
+         <font>
+            <Font name="System Bold Italic" size="33.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.47790055248618785" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.1289595514535904" green="0.34789636731147766" blue="0.3815789520740509" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4572761499427075">
+                     <color>
+                        <Color red="0.013888888992369175" green="0.15789473056793213" blue="0.059490740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7550335570469796">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01656920090317726" green="0.05454028770327568" blue="0.22368420660495758" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
