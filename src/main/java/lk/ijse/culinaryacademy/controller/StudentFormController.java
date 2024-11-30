@@ -82,6 +82,15 @@ public class StudentFormController {
         setCellValueFactory();
         loadAllStudent();
         setChoiceBoxData();
+        generateStudentId();
+
+        registerDatePicker.setValue(java.time.LocalDate.now());
+
+    }
+
+    private void generateStudentId() {
+        String studentId = studentBO.getGeneratedStudentId(); // Call BO to get the generated ID
+        txtId.setText(studentId);
     }
 
     private void setChoiceBoxData() {

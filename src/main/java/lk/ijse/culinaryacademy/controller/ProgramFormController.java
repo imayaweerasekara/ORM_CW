@@ -55,8 +55,13 @@ public class ProgramFormController {
     public void initialize() {
         setCellValueFactory();
         loadAllPrograms();
+        generateProgramId();
     }
 
+    private void generateProgramId() {
+        String programId =academicBO.getGeneratedProgramId(); // Call BO to get the generated ID
+        txtId.setText(programId);
+    }
     private void setCellValueFactory() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colProgramName.setCellValueFactory(new PropertyValueFactory<>("programName"));

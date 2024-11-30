@@ -7,4 +7,6 @@ public interface ProgramsDAO extends CrudDAO<Programs> {
     Programs getProgramsCheckName(String programName);
     Programs getCulinaryProgram(String programId);
     Long getProgramCount();
+    String generateProgramId();
+
 }

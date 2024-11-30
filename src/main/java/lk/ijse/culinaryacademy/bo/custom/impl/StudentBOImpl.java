@@ -21,20 +21,22 @@ import java.util.List;
 public class StudentBOImpl implements StudentBO {
     StudentDAO studentDAO = (StudentDAO) DAOFactory.getDAO(DAOFactory.DAOType.STUDENT);
     ProgramsDAO programsDAO = (ProgramsDAO) DAOFactory.getDAO(DAOFactory.DAOType.PROGRAM);
+
+
     @Override
     public void deleteStudent(StudentDTO studentDTO) throws InUseException {
         Student student=new Student(studentDTO.getStudentId(),studentDTO.getName(),studentDTO.getAddress(),studentDTO.getTel(),studentDTO.getRegistrationDate(),studentDTO.getEnrollments());
         studentDAO.delete(student);
 
 
-//        StudentDAOImpl studentDAO = new StudentDAOImpl();
-//        try {
-//            studentDAO.delete(new Student());
-//        }catch (InUseException e){
-//            alert("This student have enrollment");
-//        } catch (Exception e){
-//            alert("Somthing went wrong");
-//        }
+        /*StudentDAOImpl studentDAO = new StudentDAOImpl();
+        try {
+            studentDAO.delete(new Student());
+        }catch (InUseException e){
+            alert("This student have enrollment");
+        } catch (Exception e){
+            alert("Somthing went wrong");
+        }*/
     }
 
     @Override
@@ -91,4 +93,10 @@ Student student=new Student(studentDTO.getStudentId(),studentDTO.getName(),stude
     public Long getStudentCount() {
         return studentDAO.getStudentCount();
     }
+
+    @Override
+    public String getGeneratedStudentId() {
+        return studentDAO.generateStudentId();
+    }
+
 }
